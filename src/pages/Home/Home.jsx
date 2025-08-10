@@ -4,6 +4,7 @@ import axios from "axios";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { motion } from "framer-motion";
+import Card from "../../components/ui/Card";
 import { AuthContext } from "../../context/AuthC";
 import PulsingDotLoader from "../../components/PulsingDotLoader"; // Ensure this path is correct
 
@@ -173,65 +174,33 @@ const Home = () => {
         </div>
 
         {loadingFeatured ? (
-          <PulsingDotLoader /> // Display loader when featured foods are loading
+          <PulsingDotLoader />
         ) : featuredFoods.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {" "}
-            {/* Increased gap */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
             {featuredFoods.map((food) => (
               <motion.div
                 key={food._id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-accent-custom flex flex-col h-full" // Enhanced card styling
                 whileHover={{
                   scale: 1.03,
                   boxShadow:
                     "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-                }} // Deeper shadow on hover
-                initial={{ opacity: 0, y: 30 }} // Slightly more pronounced initial animation
+                }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }} // Smoother transition
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="h-full w-full flex justify-center"
               >
-                <img
-                  src={food.image}
-                  alt={food.name}
-                  className="h-56 w-full object-cover border-b border-accent-custom" // Added border
+                <Card
+                  image={food.image}
+                  title={food.name}
+                  description={`Quantity: ${food.quantity}\nPickup: ${
+                    food.pickupLocation
+                  }\n${
+                    food.additionalNotes || "No additional notes provided."
+                  }`}
+                  onSeeMore={() => handleViewDetails(food._id)}
+                  buttonText="View Details"
                 />
-                <div className="p-6 flex flex-col flex-grow space-y-3">
-                  {" "}
-                  {/* Increased padding and spacing */}
-                  <h3 className="text-2xl font-bold text-primary-custom line-clamp-1">
-                    {" "}
-                    {/* Updated to use primary color */}
-                    {food.name}
-                  </h3>
-                  <p className="text-custom text-lg">
-                    <span className="font-semibold text-accent-custom">
-                      Quantity:
-                    </span>{" "}
-                    {food.quantity}
-                  </p>
-                  <p className="text-custom text-lg">
-                    <span className="font-semibold text-accent-custom">
-                      Pickup:
-                    </span>{" "}
-                    {food.pickupLocation}
-                  </p>
-                  <p className="text-custom/70 text-base line-clamp-3 flex-grow">
-                    {" "}
-                    {/* Updated to use custom text color */}
-                    {food.additionalNotes || "No additional notes provided."}
-                  </p>
-                  <div className="mt-auto pt-4">
-                    {" "}
-                    {/* Push button to bottom */}
-                    <button
-                      onClick={() => handleViewDetails(food._id)}
-                      className="w-full bg-primary-custom hover:bg-accent-custom text-secondary-custom font-semibold px-5 py-3 rounded-lg transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-primary-custom focus:ring-offset-2"
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
