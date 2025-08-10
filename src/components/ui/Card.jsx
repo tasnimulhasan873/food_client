@@ -8,7 +8,7 @@ const Card = ({
   buttonText = "See more",
 }) => {
   return (
-    <div className="bg-primary text-secondary rounded-xl shadow-lg overflow-hidden border border-accent flex flex-col h-full w-full max-w-xs mx-auto min-h-[420px]">
+    <div className="bg-primary text-secondary rounded-2xl shadow-lg overflow-hidden border border-accent flex flex-col h-[420px] w-full max-w-xs mx-auto min-w-[280px]">
       <img
         src={image}
         alt={title}
@@ -21,13 +21,22 @@ const Card = ({
         <p className="text-secondary/80 text-base line-clamp-3 flex-grow">
           {description}
         </p>
-        <div className="mt-auto pt-4">
+        <div className="mt-auto pt-4 flex gap-3">
+          {/* Filled Button */}
           <button
             onClick={onSeeMore}
-            className="w-full bg-accent hover:bg-secondary text-base-100 font-semibold px-5 py-3 rounded-lg transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+            className="w-full bg-accent hover:bg-secondary text-base-100 font-semibold px-5 py-3 rounded-2xl transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
           >
             {buttonText}
           </button>
+          {/* Outline Button Example (hidden by default, for uniformity) */}
+          {/*
+          <button
+            className="w-full border-2 border-accent text-secondary bg-transparent font-semibold px-5 py-3 rounded-2xl transition-colors duration-300 hover:bg-accent hover:text-base-100 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+          >
+            Outline
+          </button>
+          */}
         </div>
       </div>
     </div>
