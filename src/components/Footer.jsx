@@ -73,28 +73,19 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3">
             <li>
-              <a
-                href="#"
-                className="text-custom hover:text-accent-custom transition-colors duration-300 font-medium"
-              >
+              <span className="text-custom/60 font-medium cursor-not-allowed select-none">
                 Terms & Conditions
-              </a>
+              </span>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-custom hover:text-accent-custom transition-colors duration-300 font-medium"
-              >
+              <span className="text-custom/60 font-medium cursor-not-allowed select-none">
                 Privacy Policy
-              </a>
+              </span>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-custom hover:text-accent-custom transition-colors duration-300 font-medium"
-              >
+              <span className="text-custom/60 font-medium cursor-not-allowed select-none">
                 Return Policy
-              </a>
+              </span>
             </li>
           </ul>
         </div>

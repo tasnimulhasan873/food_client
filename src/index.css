@@ -2,66 +2,56 @@
 @plugin "daisyui";
 
 /* Custom Color Variables */
-:root {
-  --text-color: #5c6574;
-  --background-color: #f4f1ea;
-  --primary-color: #ffb300;
-  --secondary-color: #01101e;
-  --accent-color: #c5a91b;
-}
-
-/* Set the body background to the custom background color */
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  min-height: 100vh;
-  padding-top: 80px; /* Account for fixed navbar height */
+  @apply bg-base-100 text-custom min-h-screen pt-20 transition-colors duration-300;
 }
 
-/* Ensure main content doesn't get hidden behind fixed navbar */
+.dark body {
+  @apply bg-base-100 text-custom min-h-screen pt-20 transition-colors duration-300;
+}
+
 .main-content {
   padding-top: 1rem;
 }
 
-/* Custom utility classes for the color scheme */
 .text-custom {
-  color: var(--text-color);
+  @apply text-base-content;
 }
 
 .bg-custom {
-  background-color: var(--background-color);
+  @apply bg-base-100;
 }
 
 .text-primary-custom {
-  color: var(--primary-color);
+  @apply text-primary;
 }
 
 .bg-primary-custom {
-  background-color: var(--primary-color);
+  @apply bg-primary;
 }
 
 .text-secondary-custom {
-  color: var(--secondary-color);
+  @apply text-secondary;
 }
 
 .bg-secondary-custom {
-  background-color: var(--secondary-color);
+  @apply bg-secondary;
 }
 
 .text-accent-custom {
-  color: var(--accent-color);
+  @apply text-accent;
 }
 
 .bg-accent-custom {
-  background-color: var(--accent-color);
+  @apply bg-accent;
 }
 
 .border-primary-custom {
-  border-color: var(--primary-color);
+  @apply border-primary;
 }
 
 .border-accent-custom {
-  border-color: var(--accent-color);
+  @apply border-accent;
 }
 
 @keyframes scaleIn {

@@ -2,6 +2,7 @@ import { useContext, useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthC";
 import logo from "../assets/logo.png";
+import ThemeToggleBtn from "./ui/ThemeToggleBtn";
 
 const Header = () => {
   const { user, signoutUser } = useContext(AuthContext);
@@ -146,8 +147,9 @@ const Header = () => {
           </ul>
         </div>
 
-        {/* Right Side - User Profile & Mobile Menu */}
+        {/* Right Side - Theme Toggle, User Profile & Mobile Menu */}
         <div className="flex items-center gap-3">
+          <ThemeToggleBtn />
           {/* User Profile (Desktop & Mobile) */}
           {user && (
             <div className="relative" ref={dropdownRef}>

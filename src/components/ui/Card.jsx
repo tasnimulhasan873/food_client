@@ -24,7 +24,7 @@ const Card = ({
         <div className="mt-auto pt-4">
           <button
             onClick={onSeeMore}
-            className="w-full bg-primary-custom hover:bg-accent-custom text-secondary-custom font-semibold px-5 py-3 rounded-lg transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-primary-custom focus:ring-offset-2"
+            className="w-full bg-primary-custom hover:bg-accent-custom text-black font-semibold px-5 py-3 rounded-lg transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-primary-custom focus:ring-offset-2"
           >
             {buttonText}
           </button>

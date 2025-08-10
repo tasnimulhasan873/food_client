@@ -45,7 +45,7 @@ const Home = () => {
   };
 
   return (
-    <div className="px-4 space-y-20 max-w-7xl mx-auto mt-8 py-8 bg-custom min-h-screen">
+    <div className="px-4 space-y-20 max-w-7xl mx-auto mt-8 py-8 bg-base-100 min-h-screen text-base-content">
       {" "}
       {/* Increased overall spacing */}
       {/* Hero / Banner Section */}
@@ -58,7 +58,7 @@ const Home = () => {
           showIndicators={true}
           interval={5000}
           transitionTime={800}
-          className="rounded-2xl shadow-2xl overflow-hidden border border-accent-custom"
+          className="rounded-2xl shadow-2xl overflow-hidden border border-accent"
         >
           <div className="relative h-[400px] sm:h-[500px] lg:h-[600px]">
             <img
@@ -66,20 +66,20 @@ const Home = () => {
               alt="Community food sharing - People sharing meals together"
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div className="text-center text-white px-4 max-w-4xl">
-                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-t from-neutral/80 via-neutral/20 to-transparent flex items-center justify-center">
+              <div className="text-center text-base-content px-4 max-w-4xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 drop-shadow-lg text-primary">
                   Share Love Through Food
                 </h1>
-                <p className="text-lg sm:text-xl lg:text-2xl mb-6 drop-shadow-md opacity-90">
+                <p className="text-lg sm:text-xl lg:text-2xl mb-6 drop-shadow-md opacity-90 text-base-content">
                   Connect with your community by sharing surplus food and
                   reducing waste
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-primary-custom hover:bg-accent-custom text-secondary-custom font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <button className="bg-primary hover:bg-accent text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Start Sharing
                   </button>
-                  <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary-custom font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                  <button className="bg-transparent border-2 border-base-content text-base-content hover:bg-accent hover:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                     Learn More
                   </button>
                 </div>
@@ -103,12 +103,10 @@ const Home = () => {
                   you
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-primary-custom hover:bg-accent-custom text-secondary-custom font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <button className="bg-primary-custom hover:bg-accent-custom text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Browse Foods
                   </button>
-                  <button className="bg-white border-2 border-white text-white 
-hover:bg-white hover:text-black 
-font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                  <button className="bg-transparent border-2 border-white text-white hover:bg-accent-custom hover:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                     How It Works
                   </button>
                 </div>
@@ -131,10 +129,10 @@ font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                   Together we can eliminate food waste and help those in need
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-primary-custom hover:bg-accent-custom text-secondary-custom font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <button className="bg-primary-custom hover:bg-accent-custom text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Make Impact
                   </button>
-                  <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary-custom font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                  <button className="bg-transparent border-2 border-white text-white hover:bg-accent-custom hover:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                     Our Mission
                   </button>
                 </div>
@@ -148,14 +146,14 @@ font-semibold px-8 py-3 rounded-lg transition-all duration-300">
         <div className="flex justify-between items-center mb-8">
           {" "}
           {/* Adjusted spacing */}
-          <h2 className="text-4xl font-extrabold text-primary-custom">
+          <h2 className="text-4xl font-extrabold text-primary">
             {" "}
             {/* Updated to use primary color */}
             🍱 Featured Foods
           </h2>
           <Link
             to="/available-foods"
-            className="inline-flex items-center px-6 py-3 bg-primary-custom text-secondary-custom font-semibold rounded-lg shadow-md hover:bg-accent-custom transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-custom focus:ring-offset-2"
+            className="inline-flex items-center px-6 py-3 bg-primary text-secondary font-semibold rounded-lg shadow-md hover:bg-accent transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
             See All Foods
             <svg
@@ -207,16 +205,16 @@ font-semibold px-8 py-3 rounded-lg transition-all duration-300">
             ))}
           </div>
         ) : (
-          <p className="text-center text-xl text-custom py-10 border border-dashed border-accent-custom rounded-lg p-6">
+          <p className="text-center text-xl text-base-content py-10 border border-dashed border-accent rounded-lg p-6">
             No featured foods available at the moment. Please check back later!
           </p>
         )}
       </section>
       {/* Extra Section 1: How It Works */}
-      <section className="bg-white/50 rounded-2xl p-10 shadow-xl border border-accent-custom">
+      <section className="bg-base-100/80 dark:bg-neutral rounded-2xl p-10 shadow-xl border border-accent">
         {" "}
         {/* Updated background for better contrast */}
-        <h2 className="text-4xl font-extrabold text-primary-custom mb-10 text-center">
+        <h2 className="text-4xl font-extrabold text-primary mb-10 text-center">
           {" "}
           {/* Updated to use primary color */}
           How It Works
@@ -225,21 +223,19 @@ font-semibold px-8 py-3 rounded-lg transition-all duration-300">
           {" "}
           {/* Increased gap */}
           <motion.div
-            className="space-y-4 p-6 bg-white rounded-xl shadow-md border border-accent-custom" // Updated border color
+            className="space-y-4 p-6 bg-base-100 dark:bg-neutral rounded-xl shadow-md border border-accent" // Updated border color
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-primary-custom/20 text-primary-custom text-4xl font-bold shadow-inner">
+            <div className="mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-primary/20 text-primary text-4xl font-bold shadow-inner">
               {" "}
               {/* Updated colors */}1
             </div>
-            <h3 className="text-2xl font-bold text-primary-custom">
-              Share Food
-            </h3>{" "}
+            <h3 className="text-2xl font-bold text-primary">Share Food</h3>{" "}
             {/* Updated to use primary color */}
-            <p className="text-custom text-lg leading-relaxed">
+            <p className="text-base-content text-lg leading-relaxed">
               {" "}
               {/* Updated to use custom text color */}
               Donors effortlessly add their surplus food items, providing
@@ -247,37 +243,33 @@ font-semibold px-8 py-3 rounded-lg transition-all duration-300">
             </p>
           </motion.div>
           <motion.div
-            className="space-y-4 p-6 bg-white rounded-xl shadow-md border border-accent-custom"
+            className="space-y-4 p-6 bg-base-100 dark:bg-neutral rounded-xl shadow-md border border-accent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-primary-custom/20 text-primary-custom text-4xl font-bold shadow-inner">
+            <div className="mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-primary/20 text-primary text-4xl font-bold shadow-inner">
               2
             </div>
-            <h3 className="text-2xl font-bold text-primary-custom">
-              Request Food
-            </h3>
-            <p className="text-custom text-lg leading-relaxed">
+            <h3 className="text-2xl font-bold text-primary">Request Food</h3>
+            <p className="text-base-content text-lg leading-relaxed">
               Users browse available listings and submit requests for food items
               they'd like to pick up.
             </p>
           </motion.div>
           <motion.div
-            className="space-y-4 p-6 bg-white rounded-xl shadow-md border border-accent-custom"
+            className="space-y-4 p-6 bg-base-100 dark:bg-neutral rounded-xl shadow-md border border-accent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-primary-custom/20 text-primary-custom text-4xl font-bold shadow-inner">
+            <div className="mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-primary/20 text-primary text-4xl font-bold shadow-inner">
               3
             </div>
-            <h3 className="text-2xl font-bold text-primary-custom">
-              Enjoy & Connect
-            </h3>
-            <p className="text-custom text-lg leading-relaxed">
+            <h3 className="text-2xl font-bold text-primary">Enjoy & Connect</h3>
+            <p className="text-base-content text-lg leading-relaxed">
               Pick up your food, savor it, and connect with fellow community
               members who share your values.
             </p>
@@ -285,10 +277,10 @@ font-semibold px-8 py-3 rounded-lg transition-all duration-300">
         </div>
       </section>
       {/* Extra Section 2: Community Testimonials */}
-      <section className="bg-white/50 rounded-2xl p-10 shadow-xl border border-accent-custom mb-8">
+      <section className="bg-base-100/80 dark:bg-neutral rounded-2xl p-10 shadow-xl border border-accent mb-8">
         {" "}
         {/* Updated background and border */}
-        <h2 className="text-4xl font-extrabold text-primary-custom mb-10 text-center">
+        <h2 className="text-4xl font-extrabold text-primary mb-10 text-center">
           {" "}
           {/* Updated to use primary color */}
           What Our Community Says
