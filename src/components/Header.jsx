@@ -36,8 +36,8 @@ const Header = () => {
         to="/"
         className={({ isActive }) =>
           isActive
-            ? "font-bold text-primary-custom underline"
-            : "text-custom hover:text-accent-custom transition-colors"
+            ? "font-bold text-primary underline"
+            : "text-base-content hover:text-accent transition-colors"
         }
       >
         Home
@@ -46,8 +46,8 @@ const Header = () => {
         to="/available-foods"
         className={({ isActive }) =>
           isActive
-            ? "font-bold text-primary-custom underline"
-            : "text-custom hover:text-accent-custom transition-colors"
+            ? "font-bold text-primary underline"
+            : "text-base-content hover:text-accent transition-colors"
         }
       >
         Available Foods
@@ -59,8 +59,8 @@ const Header = () => {
             to="/add-food"
             className={({ isActive }) =>
               isActive
-                ? "font-bold text-primary-custom underline"
-                : "text-custom hover:text-accent-custom transition-colors"
+                ? "font-bold text-primary underline"
+                : "text-base-content hover:text-accent transition-colors"
             }
           >
             Add Food
@@ -126,16 +126,16 @@ const Header = () => {
   );
 
   return (
-    <nav className="w-full bg-secondary-custom shadow-lg fixed top-0 z-50 border-b border-accent-custom">
+    <nav className="w-full bg-secondary dark:bg-neutral text-base-content shadow-lg fixed top-0 z-50 border-b border-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center gap-3 flex-shrink-0">
           <img
             src={logo}
             alt="Food Sharing Logo"
-            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md border-2 border-primary-custom"
+            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-md border-2 border-primary"
           />
-          <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-primary-custom whitespace-nowrap">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-primary whitespace-nowrap">
             FoodShare
           </h1>
         </div>
@@ -162,11 +162,11 @@ const Header = () => {
                   alt="User Profile"
                   className="w-10 h-10 rounded-full border-2 border-primary-custom hover:border-accent-custom transition-colors"
                 />
-                <span className="hidden sm:block text-custom font-medium max-w-24 truncate">
+                <span className="hidden sm:block text-base-content font-medium max-w-24 truncate">
                   {user.displayName || "User"}
                 </span>
                 <svg
-                  className={`w-4 h-4 text-primary-custom transition-transform ${
+                  className={`w-4 h-4 text-primary transition-transform ${
                     showLogout ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -183,18 +183,18 @@ const Header = () => {
               </div>
 
               {showLogout && (
-                <div className="absolute top-12 right-0 bg-white border border-accent-custom rounded-lg shadow-xl py-2 min-w-40 z-20">
+                <div className="absolute top-12 right-0 bg-base-100 dark:bg-neutral border border-accent rounded-lg shadow-xl py-2 min-w-40 z-20">
                   <div className="px-4 py-2 border-b border-gray-200">
-                    <p className="text-sm font-medium text-custom truncate">
+                    <p className="text-sm font-medium text-base-content truncate">
                       {user.displayName || "User"}
                     </p>
-                    <p className="text-xs text-custom/70 truncate">
+                    <p className="text-xs text-base-content/70 truncate">
                       {user.email}
                     </p>
                   </div>
                   <button
                     onClick={handleLogout}
-                    className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors"
+                    className="w-full text-left px-4 py-2 text-sm text-error hover:bg-error/10 transition-colors"
                   >
                     Logout
                   </button>
@@ -244,7 +244,7 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-secondary-custom border-t border-accent-custom">
+        <div className="lg:hidden bg-secondary dark:bg-neutral border-t border-accent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
             <ul className="flex flex-col space-y-3 text-base font-semibold">
               {navLinks}

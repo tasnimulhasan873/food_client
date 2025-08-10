@@ -4,36 +4,36 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary-custom text-custom py-12 px-6 font-sans shadow-inner border-t border-accent-custom">
+    <footer className="bg-secondary dark:bg-neutral text-base-content py-12 px-6 font-sans shadow-inner border-t border-accent">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 text-center md:text-left">
         {/* Brand Info / Logo Section */}
         <div className="flex flex-col items-center md:items-start lg:col-span-1">
-          <h2 className="font-extrabold text-3xl mb-4 text-primary-custom">
-            Food<span className="text-accent-custom">Share</span>
+          <h2 className="font-extrabold text-3xl mb-4 text-primary">
+            Food<span className="text-accent">Share</span>
           </h2>
-          <p className="text-custom/80 mb-4 leading-relaxed">
+          <p className="text-base-content/80 mb-4 leading-relaxed">
             Connecting communities, reducing waste. Share, request, and enjoy
             surplus food.
           </p>
-          <div className="flex justify-center md:justify-start gap-4 text-primary-custom text-2xl mt-4">
+          <div className="flex justify-center md:justify-start gap-4 text-primary text-2xl mt-4">
             <a
               href="#"
               aria-label="Facebook"
-              className="hover:text-accent-custom transition-colors duration-300 transform hover:scale-110 rounded-full p-2 bg-accent-custom/10 shadow-md"
+              className="hover:text-accent transition-colors duration-300 transform hover:scale-110 rounded-full p-2 bg-accent/10 shadow-md"
             >
               <FaFacebookF />
             </a>
             <a
               href="#"
               aria-label="Instagram"
-              className="hover:text-accent-custom transition-colors duration-300 transform hover:scale-110 rounded-full p-2 bg-accent-custom/10 shadow-md"
+              className="hover:text-accent transition-colors duration-300 transform hover:scale-110 rounded-full p-2 bg-accent/10 shadow-md"
             >
               <FaInstagram />
             </a>
             <a
               href="#"
               aria-label="Twitter"
-              className="hover:text-accent-custom transition-colors duration-300 transform hover:scale-110 rounded-full p-2 bg-accent-custom/10 shadow-md"
+              className="hover:text-accent transition-colors duration-300 transform hover:scale-110 rounded-full p-2 bg-accent/10 shadow-md"
             >
               <FaTwitter />
             </a>
@@ -42,48 +42,45 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className="flex flex-col items-center md:items-start lg:col-span-1">
-          <h3 className="font-extrabold text-2xl mb-4 border-b-4 border-primary-custom inline-block pb-1 text-primary-custom">
+          <h3 className="font-extrabold text-2xl mb-4 border-b-4 border-primary inline-block pb-1 text-primary">
             Contact Us
           </h3>
           <p className="mb-2 font-semibold">
             Email:{" "}
             <a
               href="mailto:tasnimul873@gmail.com"
-              className="text-accent-custom hover:underline"
+              className="text-accent hover:underline"
             >
               tasnimul873@gmail.com
             </a>
           </p>
           <p className="mb-2 font-semibold">
             Phone:{" "}
-            <a
-              href="tel:+1234567890"
-              className="text-accent-custom hover:underline"
-            >
+            <a href="tel:+1234567890" className="text-accent hover:underline">
               +123 456 7890
             </a>
           </p>
-          <p className="italic text-custom/60">Dhaka, Bangladesh</p>
+          <p className="italic text-base-content/60">Dhaka, Bangladesh</p>
         </div>
 
         {/* Legal Links */}
         <div className="flex flex-col items-center md:items-start lg:col-span-1">
-          <h3 className="font-extrabold text-2xl mb-4 border-b-4 border-primary-custom inline-block pb-1 text-primary-custom">
+          <h3 className="font-extrabold text-2xl mb-4 border-b-4 border-primary inline-block pb-1 text-primary">
             Legal
           </h3>
           <ul className="space-y-3">
             <li>
-              <span className="text-custom/60 font-medium cursor-not-allowed select-none">
+              <span className="text-base-content/60 font-medium cursor-not-allowed select-none">
                 Terms & Conditions
               </span>
             </li>
             <li>
-              <span className="text-custom/60 font-medium cursor-not-allowed select-none">
+              <span className="text-base-content/60 font-medium cursor-not-allowed select-none">
                 Privacy Policy
               </span>
             </li>
             <li>
-              <span className="text-custom/60 font-medium cursor-not-allowed select-none">
+              <span className="text-base-content/60 font-medium cursor-not-allowed select-none">
                 Return Policy
               </span>
             </li>
@@ -92,14 +89,14 @@ const Footer = () => {
 
         {/* Quick Links / Navigation */}
         <div className="flex flex-col items-center md:items-start lg:col-span-1">
-          <h3 className="font-extrabold text-2xl mb-4 border-b-4 border-primary-custom inline-block pb-1 text-primary-custom">
+          <h3 className="font-extrabold text-2xl mb-4 border-b-4 border-primary inline-block pb-1 text-primary">
             Quick Links
           </h3>
           <ul className="space-y-3">
             <li>
               <a
                 href="/"
-                className="text-custom hover:text-accent-custom transition-colors duration-300 font-medium"
+                className="text-base-content hover:text-accent transition-colors duration-300 font-medium"
               >
                 Home
               </a>
@@ -107,7 +104,7 @@ const Footer = () => {
             <li>
               <a
                 href="/available-foods"
-                className="text-custom hover:text-accent-custom transition-colors duration-300 font-medium"
+                className="text-base-content hover:text-accent transition-colors duration-300 font-medium"
               >
                 Available Foods
               </a>
@@ -119,7 +116,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom line */}
-      <div className="border-t border-accent-custom pt-8 mt-12 text-center text-sm text-custom/80 font-semibold tracking-wide select-none">
+      <div className="border-t border-accent pt-8 mt-12 text-center text-sm text-base-content/80 font-semibold tracking-wide select-none">
         © {currentYear} Food Sharing. All rights reserved.
       </div>
     </footer>

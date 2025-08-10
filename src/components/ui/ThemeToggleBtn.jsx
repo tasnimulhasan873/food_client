@@ -1,24 +1,27 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggleBtn() {
-  const [isDark, setIsDark] = useState(() =>
-    typeof window !== "undefined"
-      ? document.documentElement.classList.contains("dark")
-      : false
-  );
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      const root = document.getElementById("app-root");
+      return root && root.classList.contains("dark");
+    }
+    return false;
+  });
 
   useEffect(() => {
+    const root = document.getElementById("app-root");
+    if (!root) return;
     if (isDark) {
-      document.documentElement.classList.add("dark");
+      root.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      root.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
   }, [isDark]);
 
   useEffect(() => {
-    // On mount, respect system preference if no localStorage
     const saved = localStorage.getItem("theme");
     if (!saved) {
       const prefersDark = window.matchMedia(

@@ -8,7 +8,7 @@ const Card = ({
   buttonText = "See more",
 }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-accent-custom flex flex-col h-full w-full max-w-xs mx-auto min-h-[420px]">
+    <div className="bg-custom text-custom rounded-xl shadow-lg overflow-hidden border border-accent-custom flex flex-col h-full w-full max-w-xs mx-auto min-h-[420px]">
       <img
         src={image}
         alt={title}

@@ -45,7 +45,7 @@ const Home = () => {
   };
 
   return (
-    <div className="px-4 space-y-20 max-w-7xl mx-auto mt-8 py-8 bg-base-100 min-h-screen text-base-content">
+    <div className="px-4 space-y-20 max-w-7xl mx-auto mt-8 py-8 bg-custom min-h-screen text-custom">
       {" "}
       {/* Increased overall spacing */}
       {/* Hero / Banner Section */}
