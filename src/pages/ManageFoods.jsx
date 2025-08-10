@@ -82,22 +82,22 @@ const ManageFoods = () => {
   };
 
   return (
-    <div className="p-4 text-custom min-h-screen bg-custom">
-      <h2 className="text-4xl font-bold mb-8 text-center text-primary-custom">
+    <div className="p-4 main-content min-h-screen main-content-txt">
+      <h2 className="text-4xl font-bold mb-8 text-center text-primary main-content-txt">
         Manage My Foods
       </h2>
 
       {loading ? (
         <PulsingDotLoader />
       ) : foods.length === 0 ? (
-        <p className="text-custom text-center text-lg">
+        <p className="main-content-txt text-center text-lg">
           No foods available to manage.
         </p>
       ) : (
-        <div className="overflow-x-auto bg-white rounded-xl shadow-lg border border-accent-custom">
+        <div className="overflow-x-auto bg-base-100 rounded-xl shadow-lg border border-accent">
           <table className="table w-full border text-sm md:text-base">
             <thead>
-              <tr className="bg-secondary-custom text-primary-custom">
+              <tr className="bg-secondary text-base-100">
                 <th>#</th>
                 <th>Food Name</th>
                 <th>Quantity</th>
@@ -111,10 +111,10 @@ const ManageFoods = () => {
               {foods.map((food, idx) => (
                 <tr
                   key={food._id}
-                  className="border-b hover:bg-custom/50 text-custom"
+                  className="border-b hover:bg-primary/10 text-secondary"
                 >
                   <td>{idx + 1}</td>
-                  <td className="font-semibold text-primary-custom">
+                  <td className="font-semibold text-primary">
                     {food.foodName}
                   </td>
                   <td>{food.foodQuantity}</td>
@@ -124,13 +124,13 @@ const ManageFoods = () => {
                   <td>
                     <button
                       onClick={() => setEditingFood(food)}
-                      className="bg-primary-custom hover:bg-accent-custom text-secondary-custom px-3 py-1 rounded mr-2 text-sm font-medium transition duration-200"
+                      className="bg-primary hover:bg-accent text-base-100 px-3 py-1 rounded mr-2 text-sm font-medium transition duration-200"
                     >
                       Edit
                     </button>
                     <button
                       onClick={() => handleDelete(food._id)}
-                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm font-medium transition duration-200"
+                      className="bg-red-500 hover:bg-red-600 text-base-100 px-3 py-1 rounded text-sm font-medium transition duration-200"
                     >
                       Delete
                     </button>
@@ -147,9 +147,9 @@ const ManageFoods = () => {
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
           <form
             onSubmit={handleUpdate}
-            className="bg-white border border-accent-custom text-custom p-6 rounded-xl w-[90%] max-w-md shadow-xl"
+            className="bg-base-100 border border-accent main-content-txt p-6 rounded-xl w-[90%] max-w-md shadow-xl"
           >
-            <h3 className="text-2xl font-bold mb-6 text-primary-custom text-center">
+            <h3 className="text-2xl font-bold mb-6 text-primary text-center">
               Edit Food
             </h3>
 
@@ -157,7 +157,7 @@ const ManageFoods = () => {
               type="text"
               name="foodName"
               defaultValue={editingFood.foodName}
-              className="w-full px-4 py-2 border border-accent-custom bg-white text-custom rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-custom placeholder-gray-400 mb-4"
+              className="w-full px-4 py-2 border border-accent bg-base-100 main-content-txt rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 mb-4"
               placeholder="Food Name"
               required
             />
@@ -166,7 +166,7 @@ const ManageFoods = () => {
               type="text"
               name="foodQuantity"
               defaultValue={editingFood.foodQuantity}
-              className="w-full px-4 py-2 border border-accent-custom bg-white text-custom rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-custom placeholder-gray-400 mb-4"
+              className="w-full px-4 py-2 border border-accent bg-base-100 main-content-txt rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 mb-4"
               placeholder="Quantity"
               required
             />
@@ -175,7 +175,7 @@ const ManageFoods = () => {
               type="text"
               name="pickupLocation"
               defaultValue={editingFood.pickupLocation}
-              className="w-full px-4 py-2 border border-accent-custom bg-white text-custom rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-custom placeholder-gray-400 mb-4"
+              className="w-full px-4 py-2 border border-accent bg-base-100 main-content-txt rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 mb-4"
               placeholder="Pickup Location"
               required
             />
@@ -184,14 +184,14 @@ const ManageFoods = () => {
               type="datetime-local"
               name="expiredDateTime"
               defaultValue={editingFood.expiredDateTime}
-              className="w-full px-4 py-2 border border-accent-custom bg-white text-custom rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-custom placeholder-gray-400 mb-4"
+              className="w-full px-4 py-2 border border-accent bg-base-100 main-content-txt rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 mb-4"
               required
             />
 
             <textarea
               name="additionalNotes"
               defaultValue={editingFood.additionalNotes}
-              className="w-full px-4 py-2 border border-accent-custom bg-white text-custom rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-custom placeholder-gray-400 mb-6"
+              className="w-full px-4 py-2 border border-accent bg-base-100 main-content-txt rounded-lg focus:outline-none focus:ring-2 focus:ring-primary placeholder-gray-400 mb-6"
               placeholder="Additional Notes"
               rows="3"
             ></textarea>
@@ -200,13 +200,13 @@ const ManageFoods = () => {
               <button
                 type="button"
                 onClick={() => setEditingFood(null)}
-                className="px-4 py-2 border border-accent-custom text-custom bg-white rounded-lg hover:bg-custom transition duration-200"
+                className="px-4 py-2 border border-accent main-content-txt bg-base-100 rounded-lg hover:bg-primary/10 transition duration-200"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-primary-custom hover:bg-accent-custom text-secondary-custom rounded-lg transition duration-200 font-medium"
+                className="px-4 py-2 bg-primary hover:bg-accent text-base-100 rounded-lg transition duration-200 font-medium"
               >
                 Save Changes
               </button>

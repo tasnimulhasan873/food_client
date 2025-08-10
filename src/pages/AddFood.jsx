@@ -63,18 +63,18 @@ const AddFood = () => {
   };
 
   return (
-    <div className="min-h-screen bg-custom flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen main-content bg-base-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       {loading && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <PulsingDotLoader />
         </div>
       )}
-      <div className="max-w-4xl w-full bg-white rounded-2xl shadow-xl overflow-hidden border border-accent-custom">
+      <div className="max-w-4xl w-full bg-base-100 rounded-2xl shadow-xl overflow-hidden border border-accent">
         <div className="p-8 sm:p-10">
-          <h2 className="text-center text-4xl font-bold text-primary-custom mb-8 tracking-tight">
+          <h2 className="text-center text-4xl font-bold text-primary mb-8 tracking-tight main-content-txt">
             Share Your Surplus Food
           </h2>
-          <p className="text-center text-lg text-custom mb-10">
+          <p className="text-center text-lg main-content-txt mb-10">
             Help reduce food waste by adding your excess food items here.
           </p>
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -171,8 +171,8 @@ const AddFood = () => {
             </div>
 
             {/* Donor Info */}
-            <div className="bg-white border border-accent-custom p-5 rounded-xl text-custom shadow-inner">
-              <p className="text-lg font-semibold mb-2 text-primary-custom">
+            <div className="bg-base-100 border border-accent p-5 rounded-xl main-content-txt shadow-inner">
+              <p className="text-lg font-semibold mb-2 text-primary">
                 Your Donor Information:
               </p>
               <div className="flex items-center space-x-4">
@@ -180,16 +180,16 @@ const AddFood = () => {
                   <img
                     src={user.photoURL}
                     alt="Donor"
-                    className="w-16 h-16 rounded-full border-2 border-primary-custom object-cover"
+                    className="w-16 h-16 rounded-full border-2 border-primary object-cover"
                   />
                 )}
                 <div>
-                  <p className="text-custom font-medium">
-                    <span className="font-bold text-accent-custom">Name:</span>{" "}
+                  <p className="main-content-txt font-medium">
+                    <span className="font-bold text-accent">Name:</span>{" "}
                     {user?.displayName || "Anonymous"}
                   </p>
-                  <p className="text-custom text-sm">
-                    <span className="font-bold text-accent-custom">Email:</span>{" "}
+                  <p className="main-content-txt text-sm">
+                    <span className="font-bold text-accent">Email:</span>{" "}
                     {user?.email}
                   </p>
                 </div>

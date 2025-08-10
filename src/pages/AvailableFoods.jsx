@@ -45,21 +45,21 @@ const AvailableFoods = () => {
   // Replace the loading paragraph with the PulsingDotLoader component
   if (isLoading)
     return (
-      <div className="min-h-screen flex items-center justify-center bg-custom">
+      <div className="min-h-screen flex items-center justify-center main-content-txt bg-base-100">
         <PulsingDotLoader />
       </div>
     );
 
   if (error)
     return (
-      <p className="text-center mt-10 text-red-600 font-semibold text-lg">
+      <p className="text-center mt-10 text-error font-semibold text-lg">
         Failed to load foods. Please try again later.
       </p>
     );
 
   return (
-    <div className="px-4 py-10 max-w-7xl mx-auto bg-custom min-h-screen text-custom">
-      <h2 className="text-3xl font-bold text-center mb-8 text-primary-custom">
+    <div className="px-4 py-10 max-w-7xl mx-auto main-content min-h-screen main-content-txt">
+      <h2 className="text-3xl font-bold text-center mb-8 text-primary main-content-txt">
         Available Foods
       </h2>
 
@@ -71,16 +71,18 @@ const AvailableFoods = () => {
           placeholder="Search by food name or location"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border border-accent-custom bg-white text-custom px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-custom focus:border-primary-custom w-full md:w-1/3 transition duration-150 ease-in-out placeholder-gray-400"
+          className="border border-accent bg-base-100 main-content-txt px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary w-full md:w-1/3 transition duration-150 ease-in-out placeholder-gray-400"
         />
 
         {/* Sort */}
         <div className="flex items-center space-x-2">
-          <label className="text-custom font-medium">Sort by Expiration:</label>
+          <label className="main-content-txt font-medium">
+            Sort by Expiration:
+          </label>
           <select
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
-            className="border border-accent-custom bg-white text-custom px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-custom focus:border-primary-custom transition duration-150 ease-in-out"
+            className="border border-accent bg-base-100 main-content-txt px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-150 ease-in-out"
           >
             <option value="asc">Soonest Expiring</option>
             <option value="desc">Latest Expiring</option>
@@ -91,50 +93,47 @@ const AvailableFoods = () => {
       {/* Foods Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredFoods.length === 0 ? (
-          <p className="text-center col-span-full text-custom text-lg py-10">
+          <p className="text-center col-span-full main-content-txt text-lg py-10">
             No foods found matching your criteria.
           </p>
         ) : (
           filteredFoods.map((food) => (
             <div
               key={food._id}
-              className="bg-white border border-accent-custom p-6 rounded-xl shadow-lg flex flex-col hover:shadow-2xl hover:shadow-primary-custom/20 transform hover:-translate-y-1 transition duration-300 ease-in-out"
+              className="bg-primary border border-accent p-6 rounded-xl shadow-xl flex flex-col hover:shadow-2xl hover:shadow-accent/20 transform hover:-translate-y-1 transition duration-300 ease-in-out"
             >
               <img
                 src={food.image}
                 alt={food.name}
-                className="h-48 w-full object-cover rounded-lg mb-4 border border-accent-custom"
+                className="h-48 w-full object-cover rounded-lg mb-4 border border-accent"
               />
-              <h3 className="text-xl font-bold text-primary-custom mb-2">
+              <h3 className="text-2xl font-extrabold text-secondary mb-2 drop-shadow-sm">
                 {food.name}
               </h3>
-              <p className="text-custom text-sm mb-1">
-                Quantity:{" "}
-                <span className="font-medium text-accent-custom">
+              <div className="space-y-1 mb-2">
+                <p className="text-base-100 text-sm">
+                  <span className="font-semibold text-accent">Quantity:</span>{" "}
                   {food.quantity}
-                </span>
-              </p>
-              <p className="text-custom text-sm mb-1">
-                Location:{" "}
-                <span className="font-medium text-accent-custom">
+                </p>
+                <p className="text-base-100 text-sm">
+                  <span className="font-semibold text-accent">Location:</span>{" "}
                   {food.pickupLocation}
-                </span>
-              </p>
-              <p className="text-custom text-sm">
-                Expires:{" "}
-                <span className="font-medium text-accent-custom">
+                </p>
+                <p className="text-base-100 text-sm">
+                  <span className="font-semibold text-accent">Expires:</span>{" "}
                   {new Date(food.expireDateTime).toLocaleString()}
-                </span>
-              </p>
+                </p>
+              </div>
               {food.additionalNotes && (
-                <p className="text-custom/70 mt-3 text-sm italic border-t border-accent-custom pt-3">
-                  Notes: {food.additionalNotes}
+                <p className="text-base-100/80 mt-3 text-xs italic border-t border-accent pt-3">
+                  <span className="font-semibold text-accent">Notes:</span>{" "}
+                  {food.additionalNotes}
                 </p>
               )}
               <div className="mt-auto pt-6">
                 <button
                   onClick={() => handleViewDetails(food._id)}
-                  className="w-full py-2.5 px-4 bg-primary-custom hover:bg-accent-custom text-secondary-custom font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                  className="w-full py-2.5 px-4 bg-accent hover:bg-secondary text-base-100 font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
                 >
                   View Details
                 </button>

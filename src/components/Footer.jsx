@@ -4,14 +4,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary dark:bg-neutral text-base-content py-12 px-6 font-sans shadow-inner border-t border-accent">
+    <footer className="footer-bg footer-txt py-12 px-6 font-sans shadow-inner border-t border-accent">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 text-center md:text-left">
         {/* Brand Info / Logo Section */}
         <div className="flex flex-col items-center md:items-start lg:col-span-1">
           <h2 className="font-extrabold text-3xl mb-4 text-primary">
             Food<span className="text-accent">Share</span>
           </h2>
-          <p className="text-base-content/80 mb-4 leading-relaxed">
+          <p className="footer-txt/80 mb-4 leading-relaxed">
             Connecting communities, reducing waste. Share, request, and enjoy
             surplus food.
           </p>
@@ -60,7 +60,7 @@ const Footer = () => {
               +123 456 7890
             </a>
           </p>
-          <p className="italic text-base-content/60">Dhaka, Bangladesh</p>
+          <p className="italic footer-txt/60">Dhaka, Bangladesh</p>
         </div>
 
         {/* Legal Links */}
@@ -70,17 +70,17 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3">
             <li>
-              <span className="text-base-content/60 font-medium cursor-not-allowed select-none">
+              <span className="footer-txt/60 font-medium cursor-not-allowed select-none">
                 Terms & Conditions
               </span>
             </li>
             <li>
-              <span className="text-base-content/60 font-medium cursor-not-allowed select-none">
+              <span className="footer-txt/60 font-medium cursor-not-allowed select-none">
                 Privacy Policy
               </span>
             </li>
             <li>
-              <span className="text-base-content/60 font-medium cursor-not-allowed select-none">
+              <span className="footer-txt/60 font-medium cursor-not-allowed select-none">
                 Return Policy
               </span>
             </li>
@@ -96,7 +96,7 @@ const Footer = () => {
             <li>
               <a
                 href="/"
-                className="text-base-content hover:text-accent transition-colors duration-300 font-medium"
+                className="footer-txt hover:text-accent transition-colors duration-300 font-medium"
               >
                 Home
               </a>
@@ -104,7 +104,7 @@ const Footer = () => {
             <li>
               <a
                 href="/available-foods"
-                className="text-base-content hover:text-accent transition-colors duration-300 font-medium"
+                className="footer-txt hover:text-accent transition-colors duration-300 font-medium"
               >
                 Available Foods
               </a>
@@ -116,7 +116,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom line */}
-      <div className="border-t border-accent pt-8 mt-12 text-center text-sm text-base-content/80 font-semibold tracking-wide select-none">
+      <div className="border-t border-accent pt-8 mt-12 text-center text-sm footer-txt/80 font-semibold tracking-wide select-none">
         © {currentYear} Food Sharing. All rights reserved.
       </div>
     </footer>

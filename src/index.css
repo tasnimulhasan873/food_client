@@ -2,69 +2,57 @@
 @plugin "daisyui";
 
 /* Custom Color Variables */
-body {
-  @apply bg-base-100 text-custom min-h-screen pt-20 transition-colors duration-300;
+:root {
+  --color-primary: #ffb300;
+  --color-secondary: #01101e;
+  --color-accent: #c5a91b;
+  --color-base: #f4f1ea;
 }
 
-.dark body {
-  @apply bg-base-100 text-custom min-h-screen pt-20 transition-colors duration-300;
+body {
+  @apply bg-base-100 text-secondary min-h-screen pt-20 transition-colors duration-300;
 }
 
 .main-content {
   padding-top: 1rem;
 }
 
-.text-custom {
-  @apply text-base-content;
+/* Navbar and Footer backgrounds and text */
+.navbar-bg,
+.footer-bg {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-base) !important;
 }
 
-.bg-custom {
-  @apply bg-base-100;
+/* For text in navbar/footer in light mode */
+.navbar-txt,
+.footer-txt {
+  color: var(--color-base) !important;
 }
 
-.text-primary-custom {
-  @apply text-primary;
+/* For text in main content in light mode */
+.main-content-txt {
+  color: var(--color-secondary) !important;
 }
 
-.bg-primary-custom {
-  @apply bg-primary;
-}
-
-.text-secondary-custom {
-  @apply text-secondary;
-}
-
-.bg-secondary-custom {
-  @apply bg-secondary;
-}
-
-.text-accent-custom {
-  @apply text-accent;
-}
-
-.bg-accent-custom {
-  @apply bg-accent;
-}
-
-.border-primary-custom {
-  @apply border-primary;
-}
-
-.border-accent-custom {
-  @apply border-accent;
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: #18181b;
+    --color-secondary: #f4f1ea;
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
+  body {
+    @apply bg-base-100 text-secondary min-h-screen pt-20 transition-colors duration-300;
   }
-}
-
-.animate-scaleIn {
-  animation: scaleIn 0.3s ease-out forwards;
+  .navbar-bg,
+  .footer-bg {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-base) !important;
+  }
+  .navbar-txt,
+  .footer-txt {
+    color: var(--color-base) !important;
+  }
+  .main-content-txt {
+    color: var(--color-secondary) !important;
+  }
 }

@@ -45,7 +45,7 @@ const Home = () => {
   };
 
   return (
-    <div className="px-4 space-y-20 max-w-7xl mx-auto mt-8 py-8 bg-custom min-h-screen text-custom">
+    <div className="px-4 space-y-20 max-w-7xl mx-auto mt-8 py-8 bg-base-100 min-h-screen text-secondary">
       {" "}
       {/* Increased overall spacing */}
       {/* Hero / Banner Section */}
@@ -66,20 +66,20 @@ const Home = () => {
               alt="Community food sharing - People sharing meals together"
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-neutral/80 via-neutral/20 to-transparent flex items-center justify-center">
-              <div className="text-center text-base-content px-4 max-w-4xl">
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-accent/20 to-transparent flex items-center justify-center">
+              <div className="text-center text-secondary px-4 max-w-4xl">
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 drop-shadow-lg text-primary">
                   Share Love Through Food
                 </h1>
-                <p className="text-lg sm:text-xl lg:text-2xl mb-6 drop-shadow-md opacity-90 text-base-content">
+                <p className="text-lg sm:text-xl lg:text-2xl mb-6 drop-shadow-md opacity-90 text-secondary">
                   Connect with your community by sharing surplus food and
                   reducing waste
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-primary hover:bg-accent text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <button className="bg-primary hover:bg-accent text-secondary font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Start Sharing
                   </button>
-                  <button className="bg-transparent border-2 border-base-content text-base-content hover:bg-accent hover:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                  <button className="bg-transparent border-2 border-secondary text-secondary hover:bg-accent hover:text-secondary font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                     Learn More
                   </button>
                 </div>
@@ -93,20 +93,20 @@ const Home = () => {
               alt="Fresh healthy food options available for sharing"
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div className="text-center text-white px-4 max-w-4xl">
-                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-accent/20 to-transparent flex items-center justify-center">
+              <div className="text-center text-secondary px-4 max-w-4xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 drop-shadow-lg text-primary">
                   Join Our Food Community
                 </h1>
-                <p className="text-lg sm:text-xl lg:text-2xl mb-6 drop-shadow-md opacity-90">
+                <p className="text-lg sm:text-xl lg:text-2xl mb-6 drop-shadow-md opacity-90 text-secondary">
                   Discover fresh, healthy food options shared by neighbors near
                   you
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-primary-custom hover:bg-accent-custom text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <button className="bg-primary hover:bg-accent text-secondary font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Browse Foods
                   </button>
-                  <button className="bg-transparent border-2 border-white text-white hover:bg-accent-custom hover:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                  <button className="bg-transparent border-2 border-secondary text-secondary hover:bg-accent hover:text-secondary font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                     How It Works
                   </button>
                 </div>
@@ -120,19 +120,19 @@ const Home = () => {
               alt="Reducing food waste through community sharing"
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-center justify-center">
-              <div className="text-center text-white px-4 max-w-4xl">
-                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-accent/20 to-transparent flex items-center justify-center">
+              <div className="text-center text-secondary px-4 max-w-4xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 drop-shadow-lg text-primary">
                   Zero Food Waste Mission
                 </h1>
-                <p className="text-lg sm:text-xl lg:text-2xl mb-6 drop-shadow-md opacity-90">
+                <p className="text-lg sm:text-xl lg:text-2xl mb-6 drop-shadow-md opacity-90 text-secondary">
                   Together we can eliminate food waste and help those in need
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-primary-custom hover:bg-accent-custom text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <button className="bg-primary hover:bg-accent text-secondary font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Make Impact
                   </button>
-                  <button className="bg-transparent border-2 border-white text-white hover:bg-accent-custom hover:text-black font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                  <button className="bg-transparent border-2 border-secondary text-secondary hover:bg-accent hover:text-secondary font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                     Our Mission
                   </button>
                 </div>
@@ -211,7 +211,7 @@ const Home = () => {
         )}
       </section>
       {/* Extra Section 1: How It Works */}
-      <section className="bg-base-100/80 dark:bg-neutral rounded-2xl p-10 shadow-xl border border-accent">
+      <section className="bg-base-100 rounded-2xl p-10 shadow-xl border border-accent">
         {" "}
         {/* Updated background for better contrast */}
         <h2 className="text-4xl font-extrabold text-primary mb-10 text-center">
@@ -223,7 +223,7 @@ const Home = () => {
           {" "}
           {/* Increased gap */}
           <motion.div
-            className="space-y-4 p-6 bg-base-100 dark:bg-neutral rounded-xl shadow-md border border-accent" // Updated border color
+            className="space-y-4 p-6 bg-base-100 rounded-xl shadow-md border border-accent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -243,7 +243,7 @@ const Home = () => {
             </p>
           </motion.div>
           <motion.div
-            className="space-y-4 p-6 bg-base-100 dark:bg-neutral rounded-xl shadow-md border border-accent"
+            className="space-y-4 p-6 bg-base-100 rounded-xl shadow-md border border-accent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -259,7 +259,7 @@ const Home = () => {
             </p>
           </motion.div>
           <motion.div
-            className="space-y-4 p-6 bg-base-100 dark:bg-neutral rounded-xl shadow-md border border-accent"
+            className="space-y-4 p-6 bg-base-100 rounded-xl shadow-md border border-accent"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -277,7 +277,7 @@ const Home = () => {
         </div>
       </section>
       {/* Extra Section 2: Community Testimonials */}
-      <section className="bg-base-100/80 dark:bg-neutral rounded-2xl p-10 shadow-xl border border-accent mb-8">
+      <section className="bg-base-100 rounded-2xl p-10 shadow-xl border border-accent mb-8">
         {" "}
         {/* Updated background and border */}
         <h2 className="text-4xl font-extrabold text-primary mb-10 text-center">
@@ -309,7 +309,7 @@ const Home = () => {
 
 const Testimonial = ({ name, photo, quote }) => (
   <motion.div
-    className="bg-white rounded-xl p-8 shadow-md flex flex-col items-center text-center border border-accent-custom h-full" // Updated border
+    className="bg-base-100 rounded-xl p-8 shadow-md flex flex-col items-center text-center border border-accent h-full"
     whileHover={{ translateY: -5 }} // Subtle lift on hover
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
@@ -319,15 +319,13 @@ const Testimonial = ({ name, photo, quote }) => (
     <img
       src={photo}
       alt={name}
-      className="w-24 h-24 rounded-full mb-5 object-cover border-4 border-primary-custom shadow-md" // Updated border color
+      className="w-24 h-24 rounded-full mb-5 object-cover border-4 border-primary shadow-md"
     />
-    <p className="italic text-custom text-lg mb-4 leading-relaxed line-clamp-4">
+    <p className="italic text-secondary text-lg mb-4 leading-relaxed line-clamp-4">
       &quot;{quote}&quot;
     </p>{" "}
     {/* Updated text color */}
-    <h4 className="font-bold text-primary-custom text-xl mt-auto">
-      {name}
-    </h4>{" "}
+    <h4 className="font-bold text-primary text-xl mt-auto">{name}</h4>{" "}
     {/* Updated text color */}
   </motion.div>
 );

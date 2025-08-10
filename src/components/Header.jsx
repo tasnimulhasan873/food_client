@@ -37,7 +37,7 @@ const Header = () => {
         className={({ isActive }) =>
           isActive
             ? "font-bold text-primary underline"
-            : "text-base-content hover:text-accent transition-colors"
+            : "navbar-txt hover:text-accent transition-colors"
         }
       >
         Home
@@ -47,7 +47,7 @@ const Header = () => {
         className={({ isActive }) =>
           isActive
             ? "font-bold text-primary underline"
-            : "text-base-content hover:text-accent transition-colors"
+            : "navbar-txt hover:text-accent transition-colors"
         }
       >
         Available Foods
@@ -60,7 +60,7 @@ const Header = () => {
             className={({ isActive }) =>
               isActive
                 ? "font-bold text-primary underline"
-                : "text-base-content hover:text-accent transition-colors"
+                : "navbar-txt hover:text-accent transition-colors"
             }
           >
             Add Food
@@ -69,8 +69,8 @@ const Header = () => {
             to="/manage-foods"
             className={({ isActive }) =>
               isActive
-                ? "font-bold text-primary-custom underline"
-                : "text-custom hover:text-accent-custom transition-colors"
+                ? "font-bold text-primary underline"
+                : "navbar-txt hover:text-accent transition-colors"
             }
           >
             Manage My Foods
@@ -79,8 +79,8 @@ const Header = () => {
             to="/requested-foods"
             className={({ isActive }) =>
               isActive
-                ? "font-bold text-primary-custom underline"
-                : "text-custom hover:text-accent-custom transition-colors"
+                ? "font-bold text-primary underline"
+                : "navbar-txt hover:text-accent transition-colors"
             }
           >
             My Food Requests
@@ -94,8 +94,8 @@ const Header = () => {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "font-bold text-primary-custom underline"
-                : "text-custom hover:text-accent-custom transition-colors"
+                ? "font-bold text-primary underline"
+                : "navbar-txt hover:text-accent transition-colors"
             }
           >
             About Us
@@ -104,8 +104,8 @@ const Header = () => {
             to="/login"
             className={({ isActive }) =>
               isActive
-                ? "font-bold text-primary-custom underline"
-                : "text-custom hover:text-accent-custom transition-colors"
+                ? "font-bold text-primary underline"
+                : "navbar-txt hover:text-accent transition-colors"
             }
           >
             Login
@@ -114,8 +114,8 @@ const Header = () => {
             to="/register"
             className={({ isActive }) =>
               isActive
-                ? "font-bold text-primary-custom underline"
-                : "text-custom hover:text-accent-custom transition-colors"
+                ? "font-bold text-primary underline"
+                : "navbar-txt hover:text-accent transition-colors"
             }
           >
             Signup
@@ -126,7 +126,7 @@ const Header = () => {
   );
 
   return (
-    <nav className="w-full bg-secondary dark:bg-neutral text-base-content shadow-lg fixed top-0 z-50 border-b border-accent">
+    <nav className="w-full navbar-bg navbar-txt shadow-lg fixed top-0 z-50 border-b border-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center gap-3 flex-shrink-0">
@@ -148,7 +148,7 @@ const Header = () => {
         </div>
 
         {/* Right Side - Theme Toggle, User Profile & Mobile Menu */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 navbar-txt">
           <ThemeToggleBtn />
           {/* User Profile (Desktop & Mobile) */}
           {user && (
@@ -160,9 +160,9 @@ const Header = () => {
                 <img
                   src={user.photoURL || "https://via.placeholder.com/40"}
                   alt="User Profile"
-                  className="w-10 h-10 rounded-full border-2 border-primary-custom hover:border-accent-custom transition-colors"
+                  className="w-10 h-10 rounded-full border-2 border-primary hover:border-accent transition-colors"
                 />
-                <span className="hidden sm:block text-base-content font-medium max-w-24 truncate">
+                <span className="hidden sm:block text-base-100 font-medium max-w-24 truncate">
                   {user.displayName || "User"}
                 </span>
                 <svg
@@ -183,12 +183,12 @@ const Header = () => {
               </div>
 
               {showLogout && (
-                <div className="absolute top-12 right-0 bg-base-100 dark:bg-neutral border border-accent rounded-lg shadow-xl py-2 min-w-40 z-20">
-                  <div className="px-4 py-2 border-b border-gray-200">
-                    <p className="text-sm font-medium text-base-content truncate">
+                <div className="absolute top-12 right-0 bg-base-100 border border-accent rounded-lg shadow-xl py-2 min-w-40 z-20">
+                  <div className="px-4 py-2 border-b border-accent/30">
+                    <p className="text-sm font-medium text-base-100 truncate">
                       {user.displayName || "User"}
                     </p>
-                    <p className="text-xs text-base-content/70 truncate">
+                    <p className="text-xs text-base-100/70 truncate">
                       {user.email}
                     </p>
                   </div>
@@ -205,7 +205,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-primary-custom hover:text-accent-custom transition-colors p-1"
+            className="lg:hidden text-primary hover:text-accent transition-colors p-1"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -244,7 +244,7 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-secondary dark:bg-neutral border-t border-accent">
+        <div className="lg:hidden navbar-bg navbar-txt border-t border-accent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
             <ul className="flex flex-col space-y-3 text-base font-semibold">
               {navLinks}
