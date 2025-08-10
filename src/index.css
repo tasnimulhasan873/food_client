@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Custom Color Variables */
+:root {
+  --text-color: #5c6574;
+  --background-color: #f4f1ea;
+  --primary-color: #ffb300;
+  --secondary-color: #01101e;
+  --accent-color: #c5a91b;
+}
+
+/* Set the body background to the custom background color */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding-top: 80px; /* Account for fixed navbar height */
+}
+
+/* Ensure main content doesn't get hidden behind fixed navbar */
+.main-content {
+  padding-top: 1rem;
+}
+
+/* Custom utility classes for the color scheme */
+.text-custom {
+  color: var(--text-color);
+}
+
+.bg-custom {
+  background-color: var(--background-color);
+}
+
+.text-primary-custom {
+  color: var(--primary-color);
+}
+
+.bg-primary-custom {
+  background-color: var(--primary-color);
+}
+
+.text-secondary-custom {
+  color: var(--secondary-color);
+}
+
+.bg-secondary-custom {
+  background-color: var(--secondary-color);
+}
+
+.text-accent-custom {
+  color: var(--accent-color);
+}
+
+.bg-accent-custom {
+  background-color: var(--accent-color);
+}
+
+.border-primary-custom {
+  border-color: var(--primary-color);
+}
+
+.border-accent-custom {
+  border-color: var(--accent-color);
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out forwards;
+}
