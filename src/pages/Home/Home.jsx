@@ -106,7 +106,9 @@ const Home = () => {
                   <button className="bg-primary-custom hover:bg-accent-custom text-secondary-custom font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Browse Foods
                   </button>
-                  <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary-custom font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                  <button className="bg-white border-2 border-white text-white 
+hover:bg-white hover:text-black 
+font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                     How It Works
                   </button>
                 </div>
